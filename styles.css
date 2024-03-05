@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Align to the right side */
+    z-index: 9999;
+    /* Ensure it's on top of other content */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+header:hover {
+    padding-right: 0px;
+    /* Adjust padding to create hover effect */
+}
+
+nav ul {
+    list-style-type: decimal-leading-zero;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#animation-container {
+    position: relative;
+    display: inline-block;
+   
+    z-index: 1;
+    /* Ensure it's behind the header */
+}
+
+video {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Ensure video stays below overlay text */
+    z-index: 0;
+    /* Ensure video stays behind overlay text */
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 2;
+    /* Ensure it's above the video */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-text h2 {
+    font-size: 46px;
+    margin: 0;
+}
+
+.overlay-text p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+#try-now-button {
+    background-color: #271c38;
+    border: none;
+    color: white;
+    padding: 25px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 65px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(12, 12, 12, 0.1);
+}
+
+#try-now-button:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
